@@ -26,14 +26,14 @@ puts:
         cld                                     ; DF = 0(アドレス加算)
 
 .10L:                                           ; do
-        lodsp                                   ;{
+        lodsb                                   ;{
                                                 ;   AL = *SI++;
         cmp     al,0                            ;   if(0 == AL)
         je      .10E                            ;       break;
                                                 ;
         int     0x10                            ;   Int10(0x0E,AL); 文字出力
         jmp     .10L                            ;
-.10E                                            ;}while(1)
+.10E:                                           ;}while(1)
 
     ;--------------------------------------------
     ;   【レジスタの復帰】
