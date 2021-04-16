@@ -60,3 +60,23 @@ itoa:
 .22E:                                              ;    }
         dec     cx                                 ;    size-- //残りバッファサイズの減算
 .20E:                                              ; }
+
+        ;------------------------------------------
+        ;   ASCII変換                              
+        ;------------------------------------------
+        mov     bx,[bp + 10]                       ; BX = 基数
+
+.30L:                                              ; do
+                                                   ; {
+        mov     dx,0                               ;    DX = DX:AX % 基数
+        div     bx                                 ;    AX = DX:AX / 基数
+
+        mov     si,dx                              ;    //テーブル参照
+        mov     dl,byte [.ascii + si]              ;    DL = ASCII[DX]
+
+        mov     [di],dl                            ;    *dst = DL
+        dec     di                                 ;    dst--
+
+        cmp     ax,0                               
+        loopnz  .30L                               ; }while(AX);
+.30E:
