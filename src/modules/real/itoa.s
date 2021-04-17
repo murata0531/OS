@@ -39,7 +39,7 @@ itoa:
         test    bx,0b0001                          ; if(flags & 0x01)
 .10Q:   je      .10E                               ; {
         cmp     ax,0                               ;    if(val < 0)
-.12Q:   jge     .12F                               ;    {
+.12Q:   jge     .12E                               ;    {
         or      bx,0b0010                          ;        flags |= 2 //符号表示
 .12E:                                              ;    }
 .10E:                                              ; }
