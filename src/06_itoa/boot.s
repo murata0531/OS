@@ -37,3 +37,27 @@ ipl:
         ;   文字列を表示
         ;-----------------------------------
         cdecl   puts, .s0                   ; puts(.s0);
+
+        ;-----------------------------------
+        ;   数値を表示
+        ;-----------------------------------
+        cdecl   itoa, 8086, .s1, 8, 10, 0b0001      ;8086
+        cdecl   puts, .s1
+
+        cdecl   itoa, 8086, .s1, 8, 10, 0b0011      ;+ 8086
+        cdecl   puts, .s1
+
+        cdecl   itoa, -8086, .s1, 8, 10, 0b0001     ;- 8086
+        cdecl   puts, .s1
+
+        cdecl   itoa, -1, .s1, 8, 10, 0b0001        ;- 1
+        cdecl   puts, .s1
+
+        cdecl   itoa, -1, .s1, 8, 10, 0b0000        ;65535
+        cdecl   puts, .s1
+
+        cdecl   itoa, -1, .s1, 8, 16, 0b0000        ;FFFF
+        cdecl   puts, .s1
+
+        cdecl   itoa, 12, .s1, 8, 2, 0b0100         ;00001100
+        cdecl   puts, .s1
