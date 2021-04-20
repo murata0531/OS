@@ -84,3 +84,25 @@ get_mem_info:
 .10E:											; while (0 != EBX);
 
 		cdecl	puts, .s1						; // フッダを表示
+
+        ;---------------------------------------
+		; 【レジスタの復帰】
+		;---------------------------------------
+		pop		bp
+		pop		di
+		pop		si
+		pop		edx
+		pop		ecx
+		pop		ebx
+		pop		eax
+
+		ret
+
+.s0:	db " E820 Memory Map:", 0x0A, 0x0D
+		db " Base_____________ Length___________ Type____", 0x0A, 0x0D, 0
+.s1:	db " ----------------- ----------------- --------", 0x0A, 0x0D, 0
+.s2:	db " <more...>", 0
+.s3:	db 0x0D, "          ", 0x0D, 0
+
+ALIGN 4, db 0
+.b0:	times E820_RECORD_SIZE db 0
