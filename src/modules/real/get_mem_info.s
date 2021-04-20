@@ -164,3 +164,33 @@ put_mem_info:
 		shl		bx, 1							;   BX *= 2;   // 要素サイズに変換
 		add		bx, .t0							;   BX += .t0; // テーブルの先頭アドレスを加算
 		cdecl	puts, word [bx]					;   puts(*BX);
+
+        ;---------------------------------------
+		; 【レジスタの復帰】
+		;---------------------------------------
+		pop		si
+		pop		bx
+
+		;---------------------------------------
+		; 【スタックフレームの破棄】
+		;---------------------------------------
+		mov		sp, bp
+		pop		bp
+
+		ret;
+
+.s1:	db " "
+.p2:	db "ZZZZZZZZ_"
+.p3:	db "ZZZZZZZZ "
+.p4:	db "ZZZZZZZZ_"
+.p5:	db "ZZZZZZZZ "
+.p6:	db "ZZZZZZZZ", 0
+
+.s4:	db " (Unknown)", 0x0A, 0x0D, 0
+.s5:	db " (usable)", 0x0A, 0x0D, 0
+.s6:	db " (reserved)", 0x0A, 0x0D, 0
+.s7:	db " (ACPI data)", 0x0A, 0x0D, 0
+.s8:	db " (ACPI NVS)", 0x0A, 0x0D, 0
+.s9:	db " (bad memory)", 0x0A, 0x0D, 0
+
+.t0:	dw .s4, .s5, .s6, .s7, .s8, .s9, .s4, .s4
