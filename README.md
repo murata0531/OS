@@ -21,11 +21,11 @@ _________________________________
 アセンブル(パス未登録)
 
 
-..\..\tools\nasm-2.15.05\nasm ファイル -o 出力ファイル名 -l リスティングファイル名
+..\ ..\tools\nasm-2.15.05\nasm ファイル -o 出力ファイル名 -l リスティングファイル名
 
 例として「00_boot_only」内の「boot.img」をアセンブルする(アセンブルする際はboot.imgが格納されたディレクトリに移動する)
 
-Desktop\OS\src\00_boot_only> ..\tools\nasm-2.15.05\nasm .\boot.s -o boot.img -l boot.list
+Desktop\OS\src\00_boot_only> ..\ ..\tools\nasm-2.15.05\nasm .\boot.s -o boot.img -l boot.list
 
 __________________________________________
 
