@@ -7,7 +7,7 @@ __________________________________
 
 nasm(アセンブラ)
 
-qemu
+qemuまたはBochs(Bochs推奨)
 __________________________________
 
 構築
@@ -29,7 +29,7 @@ Desktop\OS\src\00_boot_only> ..\ ..\tools\nasm-2.15.05\nasm .\boot.s -o boot.img
 
 __________________________________________
 
-実行(qemuの実行環境を「C:\Program Files (x86)」に置いている場合)
+qemuでの実行(qemuの実行環境を「C:\Program Files (x86)」に置いている場合)
 
 "C:\Program Files (x86)\qemu\qemu-system-i386.exe" boot.img
 
