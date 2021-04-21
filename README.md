@@ -54,12 +54,21 @@ Bochsを起動したら
 ①「Edit Options」内の 「Disk & Boot」をダブルクリック
 
 ②「ATA channel 0」タブ内の「First HD/CD on channel 0」をクリック
+
 ③「Type of ATA device」をdisk
+
 ④「Path or pysical device name」をboot.img
+
 ⑤「Cylinders」を20
+
 ⑥「Heads」を2
+
 ⑦「Sectors per track」を16
+
 ⑧「Boot Options」タブをクリック
+
 ⑨「Bootdrive #1」をdisk
+
 ⑩「ok」-> 「start」
+
 ⑪Panicが出るので「Continue」を選択し「ok」
