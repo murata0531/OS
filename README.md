@@ -10,7 +10,7 @@ nasm(アセンブラ)
 qemuまたはBochs(Bochs推奨)
 __________________________________
 
-#構築
+# 構築
 
 デスクトップに「OS」というディレクトリを作成し、その中にgit cloneする
 
@@ -18,7 +18,7 @@ __________________________________
 
 _________________________________
 
-#アセンブル(パス未登録)
+# アセンブル(パス未登録)
 
 
 ..\ ..\tools\nasm-2.15.05\nasm ファイル -o 出力ファイル名 -l リスティングファイル名
@@ -29,7 +29,7 @@ Desktop\OS\src\00_boot_only> ..\ ..\tools\nasm-2.15.05\nasm .\boot.s -o boot.img
 
 __________________________________________
 
-#qemuでの実行(qemuの実行環境を「C:\Program Files (x86)」に置いている場合)
+# qemuでの実行(qemuの実行環境を「C:\Program Files (x86)」に置いている場合)
 
 "C:\Program Files (x86)\qemu\qemu-system-i386.exe" boot.img
 
@@ -39,7 +39,7 @@ Desktop\OS\src\00_boot_only> "C:\Program Files (x86)\qemu\qemu-system-i386.exe" 
 
 ___________________________________________
 
-#Bochsでの実行(Bochsの実行環境を「C:\Program Files (x86)」に置いている場合)
+# Bochsでの実行(Bochsの実行環境を「C:\Program Files (x86)」に置いている場合)
 
 "c:\Program Files (x86)\Bochs-2.6.11\bochs.exe"
 
@@ -49,7 +49,7 @@ Desktop\OS\src\00_boot_only> "c:\Program Files (x86)\Bochs-2.6.11\bochs.exe"
 
 ______________________________________________
 
-#Bochsを起動したら
+# Bochsを起動したら
 
 ①「Edit Options」内の 「Disk & Boot」をダブルクリック
 
