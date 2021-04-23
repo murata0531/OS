@@ -29,7 +29,8 @@ Desktop\OS\src\00_boot_only> ..\ ..\tools\nasm-2.15.05\nasm .\boot.s -o boot.img
 
 __________________________________________
 
-# qemuでの実行(qemuの実行環境を「C:\Program Files (x86)」に置いている場合)
+# qemuでの実行
+(qemuの実行環境を「C:\Program Files (x86)」に置いている場合)
 
 "C:\Program Files (x86)\qemu\qemu-system-i386.exe" boot.img
 
@@ -39,7 +40,8 @@ Desktop\OS\src\00_boot_only> "C:\Program Files (x86)\qemu\qemu-system-i386.exe" 
 
 ___________________________________________
 
-# Bochsでの実行(Bochsの実行環境を「C:\Program Files (x86)」に置いている場合)
+# Bochsでの実行
+(Bochsの実行環境を「C:\Program Files (x86)」に置いている場合)
 
 "c:\Program Files (x86)\Bochs-2.6.11\bochs.exe"
 
