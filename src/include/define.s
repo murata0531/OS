@@ -63,3 +63,13 @@
 		SP_TASK_4			equ		STACK_BASE + (STACK_SIZE * 5)
 		SP_TASK_5			equ		STACK_BASE + (STACK_SIZE * 6)
 		SP_TASK_6			equ		STACK_BASE + (STACK_SIZE * 7)
+
+		CR3_BASE			equ		0x0010_5000		; ページ変換テーブル：タスク3用
+
+		PARAM_TASK_4		equ		0x0010_8000		; 描画パラメータ：タスク4用
+		PARAM_TASK_5		equ		0x0010_9000		; 描画パラメータ：タスク5用
+		PARAM_TASK_6		equ		0x0010_A000		; 描画パラメータ：タスク6用
+
+		CR3_TASK_4			equ		0x0020_0000		; ページ変換テーブル：タスク4用
+		CR3_TASK_5			equ		0x0020_2000		; ページ変換テーブル：タスク5用
+		CR3_TASK_6			equ		0x0020_4000		; ページ変換テーブル：タスク6用
