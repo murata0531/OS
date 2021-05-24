@@ -66,26 +66,28 @@
     66                              <1> 
     67                              <1> 		VECT_BASE			equ		0x0010_0000		;	0010_0000:0010_07FF
     68                              <1> 
-    69                              <1> 		STACK_BASE			equ		0x0010_3000		; タスク用スタックエリア
-    70                              <1> 		STACK_SIZE			equ		1024			; スタックサイズ
-    71                              <1> 
-    72                              <1> 		SP_TASK_0			equ		STACK_BASE + (STACK_SIZE * 1)
-    73                              <1> 		SP_TASK_1			equ		STACK_BASE + (STACK_SIZE * 2)
-    74                              <1> 		SP_TASK_2			equ		STACK_BASE + (STACK_SIZE * 3)
-    75                              <1> 		SP_TASK_3			equ		STACK_BASE + (STACK_SIZE * 4)
-    76                              <1> 		SP_TASK_4			equ		STACK_BASE + (STACK_SIZE * 5)
-    77                              <1> 		SP_TASK_5			equ		STACK_BASE + (STACK_SIZE * 6)
-    78                              <1> 		SP_TASK_6			equ		STACK_BASE + (STACK_SIZE * 7)
-    79                              <1> 
-    80                              <1> 		CR3_BASE			equ		0x0010_5000		; ページ変換テーブル：タスク3用
-    81                              <1> 
-    82                              <1> 		PARAM_TASK_4		equ		0x0010_8000		; 描画パラメータ：タスク4用
-    83                              <1> 		PARAM_TASK_5		equ		0x0010_9000		; 描画パラメータ：タスク5用
-    84                              <1> 		PARAM_TASK_6		equ		0x0010_A000		; 描画パラメータ：タスク6用
-    85                              <1> 
-    86                              <1> 		CR3_TASK_4			equ		0x0020_0000		; ページ変換テーブル：タスク4用
-    87                              <1> 		CR3_TASK_5			equ		0x0020_2000		; ページ変換テーブル：タスク5用
-    88                              <1> 		CR3_TASK_6			equ		0x0020_4000		; ページ変換テーブル：タスク6用
+    69                              <1> 
+    70                              <1> 		STACK_BASE			equ		0x0010_3000		; タスク用スタックエリア
+    71                              <1> 		STACK_SIZE			equ		1024			; スタックサイズ
+    72                              <1> 
+    73                              <1> 		SP_TASK_0			equ		STACK_BASE + (STACK_SIZE * 1)
+    74                              <1> 		SP_TASK_1			equ		STACK_BASE + (STACK_SIZE * 2)
+    75                              <1> 		SP_TASK_2			equ		STACK_BASE + (STACK_SIZE * 3)
+    76                              <1> 		SP_TASK_3			equ		STACK_BASE + (STACK_SIZE * 4)
+    77                              <1> 		SP_TASK_4			equ		STACK_BASE + (STACK_SIZE * 5)
+    78                              <1> 		SP_TASK_5			equ		STACK_BASE + (STACK_SIZE * 6)
+    79                              <1> 		SP_TASK_6			equ		STACK_BASE + (STACK_SIZE * 7)
+    80                              <1> 
+    81                              <1> 		CR3_BASE			equ		0x0010_5000		; ページ変換テーブル：タスク3用
+    82                              <1> 
+    83                              <1> 		PARAM_TASK_4		equ		0x0010_8000		; 描画パラメータ：タスク4用
+    84                              <1> 		PARAM_TASK_5		equ		0x0010_9000		; 描画パラメータ：タスク5用
+    85                              <1> 		PARAM_TASK_6		equ		0x0010_A000		; 描画パラメータ：タスク6用
+    86                              <1> 
+    87                              <1> 		CR3_TASK_4			equ		0x0020_0000		; ページ変換テーブル：タスク4用
+    88                              <1> 		CR3_TASK_5			equ		0x0020_2000		; ページ変換テーブル：タスク5用
+    89                              <1> 		CR3_TASK_6			equ		0x0020_4000		; ページ変換テーブル：タスク6用
+    90                              <1> 
     14                                  %include	"../include/macro.s"
     15                              <1> ;************************************************************************
     16                              <1> ; 関数呼び出し用マクロ
